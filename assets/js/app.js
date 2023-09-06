@@ -19,7 +19,7 @@ function start() {
 function stop() {
     {
         clearInterval(myinterval);
-        chain = false;
+        chain = null;
     }
 }
 
