@@ -9,19 +9,17 @@ function random() {
 let chain;
 function start() {
     if (!chain) {
-        setInterval(play, 1000);
+        myinterval = setInterval(function play() {
+            document.body.style.background = random()
+        }, 1000);
+        chain = true;
     }
-    function play() {
-        document.body.style.background = random()
-    }
+
 }
 function stop() {
-    if (!chain) {
-        clearInterval(play);
-        random = null
-    }
-    function play() {
-        document.body.style.background = null
+    {
+        clearInterval(myinterval);
+        chain = false;
     }
 }
 
